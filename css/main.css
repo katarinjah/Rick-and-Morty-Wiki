@@ -3,16 +3,36 @@ body {
 }
 
 .container-fluid {
-    width: 100vw;
-    height: 100vh;
-    background-image: url("./rick and morty.jpg");
+    min-width: 100%;
+    min-height: 100%;
+    background: url("./rick and morty.jpg") no-repeat center center fixed;
     background-size: cover;
-    background-repeat: no-repeat;
 }
 
-#home-button {
-    cursor: pointer;
-    padding: 5px;
-    margin-left: 10px;
-    font-size: 15px;
+.paginator {
+   position: sticky;
+   top: 5px;
+   z-index: 1;
+}
+
+.main-container {
+    margin-top: 20px;
+}
+
+.card {
+    padding: 10px;
+    border: 5px solid #8E44AD;
+    border-radius: 10px;
+    background-color: #ffff80;
+    font-weight: 600;
+}
+
+p {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+button {
+    color: green;
+    font-weight: 500;
 }
