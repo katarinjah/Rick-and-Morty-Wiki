@@ -60,6 +60,11 @@ p {
 .name {
     margin-top: 20px;
     margin-bottom: 20px;
+    color: #5D3F6A;
+}
+
+h3, h5 {
+    color: #5D3F6A;
 }
 
 .char-img {
@@ -77,6 +82,8 @@ p {
 
 .col-sm-3 {
     align-items: center;
+    color: #5D3F6A;
+    font-size: 17px;
 }
 
 #back-button {
