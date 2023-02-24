@@ -32,36 +32,46 @@ export const renderSingleCharacter = character => {
     <div class="row justify-content-center">
       <img class="char-img" src="${character.image}">
     </div>
-    <div class="details overflow-hidden">
+    <div class="details">
       <div class="row justify-content-center">
+        <div class="col-sm-3"></div>
         <div class="col-sm-3">
           <h5>Status: </h5>
         </div>
-        <div class="col-sm-9">${character.status}</div>
+        <div class="col-sm-3">${character.status}</div>
+        <div class="col-sm-3"></div>
       </div>
       <div class="row justify-content-center">
+      <div class="col-sm-3"></div>
         <div class="col-sm-3">
           <h5>Species: </h5> 
         </div>
-        <div class="col-sm-9">${character.species}</div>
+        <div class="col-sm-3">${character.species}</div>
+        <div class="col-sm-3"></div>
       </div>
       <div class="row justify-content-center">
+      <div class="col-sm-3"></div>
         <div class="col-sm-3">
           <h5>Gender: </h5> 
         </div>
-        <div class="col-sm-9">${character.gender}</div>
+        <div class="col-sm-3">${character.gender}</div>
+        <div class="col-sm-3"></div>
       </div>
       <div class="row justify-content-center">
+      <div class="col-sm-3"></div>
         <div class="col-sm-3">
           <h5>Origin: </h5> 
         </div>
-        <div class="col-sm-9">${character.origin.name}</div>
+        <div class="col-sm-3">${character.origin.name}</div>
+        <div class="col-sm-3"></div>
       </div>
       <div class="row justify-content-center">
+      <div class="col-sm-3"></div>
         <div class="col-sm-3">
           <h5>Location: </h5>
         </div>
-        <div class="col-sm-9">${character.location.name}</div>
+        <div class="col-sm-3">${character.location.name}</div>
+        <div class="col-sm-3"></div>
       </div>
       <div class="row justify-content-center">
         <button id="back-button">Back</button>

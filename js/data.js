@@ -20,6 +20,22 @@ export const getCharacters = () => {
     });
 };
 
+export const paginated_fetch = () => {
+  return fetch(`${url}&page=${page}`)
+    .then(response => response.json())
+    .then(newResponse => {
+      const response = [...previousResponse, ...newResponse];
+
+      if (newResponse.length !== 0) {
+        page++;
+
+        return paginated_fetch(url, page, response);
+      }
+
+      return response;
+    });
+}
+
 export const getSingleCharacter = id => {
   return fetch(`https://rickandmortyapi.com/api/character/${id}`)
     .then(response => response.json())
