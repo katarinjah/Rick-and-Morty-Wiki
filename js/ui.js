@@ -1,4 +1,4 @@
-const mainContainer = document.querySelector(".main-container")
+export const mainContainer = document.querySelector(".main-container")
 
 export const renderCharacters = characters => {
   let html = `<div class="row text-center gy-5 character-list">`;
@@ -16,6 +16,52 @@ export const renderCharacters = characters => {
     
   html += `</div>`;
   mainContainer.innerHTML = html;
-}
+};
 
-// export renderSingleCharacter = character => {}
+export const renderSingleCharacter = character => {
+  let html = `
+  <div class="character-box">
+    <div class="row text-center">
+      <h3 class="name">${character.name}</h3>
+      <hr>
+    </div>
+    <div class="row justify-content-center">
+      <img class="char-img" src="${character.image}">
+    </div>
+    <div class="details">
+      <div class="row">
+        <div class="col-sm-3">
+          <h5>Status: </h5>
+        </div>
+        <div class="col-sm-9">${character.status}</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <h5>Species: </h5> 
+        </div>
+        <div class="col-sm-9">${character.species}</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <h5>Gender: </h5> 
+        </div>
+        <div class="col-sm-9">${character.gender}</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <h5>Origin: </h5> 
+        </div>
+        <div class="col-sm-9">${character.origin.name}</div>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <h5>Location: </h5>
+        </div>
+        <div class="col-sm-9">${character.location.name}</div>
+      </div>
+    </div>
+  </div>
+  `;
+
+  mainContainer.innerHTML = html;
+}

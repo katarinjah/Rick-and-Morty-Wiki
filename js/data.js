@@ -1,8 +1,13 @@
 class Character {
-    constructor(id, image, name) {
+    constructor(id, image, name, status, species, gender, origin, location) {
         this.id = id,
         this.image = image,
-        this.name = name
+        this.name = name,
+        this.status = status,
+        this.species = species,
+        this.gender = gender,
+        this.origin = origin,
+        this.location = location
     };
 };
 
@@ -16,18 +21,20 @@ export const getCharacters = () => {
 };
 
 export const getSingleCharacter = id => {
-    return fetch(`https://rickandmortyapi.com/api/character/${id}`)
-    .then(res => res.json())
-    .then(characterData => {
+  return fetch(`https://rickandmortyapi.com/api/character/${id}`)
+    .then(response => response.json())
+    .then(data => {
       return new Character(
-        characterData.id,
-        characterData.name,
-        characterData.image,
-        characterData.status,
-        characterData.species,
-        characterData.gender,
-        characterData.origin.name,
-        characterData.location.name
-      );
-    });
-  };
+        data.id,
+        data.image,
+        data.name,
+        data.status,
+        data.species,
+        data.gender,
+        data.origin.name,
+        data.location.name
+      );       
+  });
+};
+
+  
