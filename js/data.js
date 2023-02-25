@@ -11,35 +11,23 @@ class Character {
     };
 };
 
-export const getCharacters = () => {
-    return fetch(`https://rickandmortyapi.com/api/character`)
+export const getCharacters = (page = 1) => {
+  const url = `https://rickandmortyapi.com/api/character${page > 1 ? `?page=${page}` : ""}`;
+  return fetch(url)
     .then(res => res.json())
     .then(response => {
-        return response.results.map(({ id, image, name }) =>
+      return response.results.map(({ id, image, name }) =>
         new Character(id, image, name));
     });
 };
-
-export const paginated_fetch = () => {
-  return fetch(`${url}&page=${page}`)
-    .then(response => response.json())
-    .then(newResponse => {
-      const response = [...previousResponse, ...newResponse];
-
-      if (newResponse.length !== 0) {
-        page++;
-
-        return paginated_fetch(url, page, response);
-      }
-
-      return response;
-    });
-}
 
 export const getSingleCharacter = id => {
   return fetch(`https://rickandmortyapi.com/api/character/${id}`)
     .then(response => response.json())
     .then(data => {
+      console.log(data)
+      const originName = data.origin.name;
+      const  locationName = data.location.name;
       return new Character(
         data.id,
         data.image,
@@ -47,8 +35,8 @@ export const getSingleCharacter = id => {
         data.status,
         data.species,
         data.gender,
-        data.origin.name,
-        data.location.name
+        originName,
+        locationName
       );       
   });
 };

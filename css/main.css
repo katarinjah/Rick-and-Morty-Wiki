@@ -10,9 +10,15 @@ body {
 }
 
 .paginator {
-   position: sticky;
-   top: 5px;
-   z-index: 1;
+    position: sticky;
+    top: 5px;
+    z-index: 1;
+}
+
+li {
+    width: 6%;
+    text-align: center;
+    font-weight: 500;
 }
 
 .main-container {
@@ -81,9 +87,16 @@ h3, h5 {
 }
 
 .col-sm-3 {
-    align-items: center;
     color: #5D3F6A;
     font-size: 17px;
+}
+
+.left {
+    padding-left: 9%;
+}
+
+.right {
+    padding-right: 5%;
 }
 
 #back-button {
@@ -94,7 +107,7 @@ h3, h5 {
     color: white;
     border-radius: 10px;
     border: 2px solid #8E44AD;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 button:active {
