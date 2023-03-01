@@ -1,9 +1,9 @@
 import { getCharacters, getSingleCharacter } from "./data.js"
 import { mainContainer, pageNumberElement, nextButton, previousButton, renderCharacters, renderSingleCharacter } from "./ui.js"
 
-window.onload = () => {
+(() => {
   getCharacters().then(character => {renderCharacters(character)});
-};
+})();
 
 let currentPage = 1;
 let pageNumber = parseInt(pageNumberElement.innerHTML);
