@@ -2,6 +2,7 @@ body {
     margin: 0;
     background: url("./rick and morty.jpg") no-repeat center fixed;
     background-size: cover;
+    background-position: fixed;
 }
 
 .wrapper {
@@ -119,8 +120,14 @@ button:active {
     }
 }
 
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 576px) {
     .character-box {
-        min-width: 220px;
+        min-width: 250px;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .character-box {
+        min-width: 300px;
     }
 }
