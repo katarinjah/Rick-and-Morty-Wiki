@@ -35,48 +35,38 @@ export const renderSingleCharacter = character => {
     <div class="row justify-content-center">
       <img class="char-img" src="${character.image}">
     </div>
-    <div class="details">
+    <div class="container-fluid details">
       <div class="row">
-        <div class="col-sm-3"></div>
-        <div class="col-sm-3 left">
-          <h5>Status: </h5>
+        <div class="col-6">
+          <h5 align="right">Status: </h5>
         </div>
-        <div class="col-sm-3 right">${character.status}</div>
-        <div class="col-sm-3"></div>
+        <div class="col-6 justify-content-start">${character.status}</div>
       </div>
       <div class="row">
-      <div class="col-sm-3"></div>
-        <div class="col-sm-3 left">
-          <h5>Species: </h5> 
+        <div class="col-6">
+          <h5 align="right">Species: </h5> 
         </div>
-        <div class="col-sm-3 right">${character.species}</div>
-        <div class="col-sm-3"></div>
+        <div class="col-6 justify-content-start">${character.species}</div>
       </div>
       <div class="row">
-      <div class="col-sm-3"></div>
-        <div class="col-sm-3 left">
-          <h5>Gender: </h5> 
+        <div class="col-6">
+          <h5 align="right">Gender: </h5> 
         </div>
-        <div class="col-sm-3 right">${character.gender}</div>
-        <div class="col-sm-3"></div>
+        <div class="col-6 justify-content-start">${character.gender}</div>
       </div>
       <div class="row">
-      <div class="col-sm-3"></div>
-        <div class="col-sm-3 left">
-          <h5>Origin: </h5> 
+        <div class="col-6">
+          <h5 align="right">Origin: </h5> 
         </div>
-        <div class="col-sm-3 right">${character.origin}</div>
-        <div class="col-sm-3"></div>
+        <div class="col-6 justify-content-start">${character.origin}</div>
       </div>
       <div class="row">
-      <div class="col-sm-3"></div>
-        <div class="col-sm-3 left">
-          <h5>Location: </h5>
+        <div class="col-6">
+          <h5 align="right">Location: </h5>
         </div>
-        <div class="col-sm-3 right">${character.location}</div>
-        <div class="col-sm-3"></div>
+        <div class="col-6 justify-content-start">${character.location}</div>
       </div>
-      <div class="row justify-content-center">
+      <div class="container-fluid d-flex justify-content-center">
         <button id="back-button">Back</button>
       </div>
     </div>
