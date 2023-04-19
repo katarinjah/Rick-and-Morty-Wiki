@@ -6,4 +6,4 @@ Single-page app that fetches and displays all characters from the https://rickan
 
 Built with: **HTML**, **CSS**, **Bootstrap**, **JavaScript**
 
-[Click here](https://rick-and-morty-wiki-page.netlify.app/) for live demo
+[Click here](https://rick-and-morty-wiki-page.netlify.app/) for a live demo
